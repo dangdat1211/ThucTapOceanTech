@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "855547269468",
+    "project_id": "bai-tap-thuc-tap",
+    "storage_bucket": "bai-tap-thuc-tap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855547269468:android:7ed46ffb6eec23943bf199",
+        "android_client_info": {
+          "package_name": "com.example.firebase_l1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJrEvAWF9fAJstEs2IrZQEDWC_Bqw3Y48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
