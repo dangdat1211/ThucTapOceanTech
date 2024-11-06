@@ -7,11 +7,16 @@ environment:
   sdk: '>=3.5.0-180.3.beta <4.0.0'
 
 dependencies:
+  cloud_firestore: ^5.4.4
+  datetime_picker_formfield_new: ^2.1.0
   firebase_auth: ^5.3.1
   firebase_core: ^3.6.0
   firebase_storage: ^12.3.4
   flutter:
     sdk: flutter
+  flutter_local_notifications: ^18.0.0
+  intl: ^0.19.0
+  timezone: ^0.9.4
 
 dev_dependencies:
   flutter_test:
