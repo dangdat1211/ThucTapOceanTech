@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
 
-class HomeScreen extends StatelessWidget {
+class AuthScreen extends StatelessWidget {
   final AuthService _authService = AuthService();
 
-  HomeScreen({Key? key}) : super(key: key);
+  AuthScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

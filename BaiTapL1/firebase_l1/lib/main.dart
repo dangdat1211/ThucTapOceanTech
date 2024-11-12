@@ -1,9 +1,10 @@
-import 'package:firebase_l1/bai4_5/screens/home_screen.dart';
-import 'package:firebase_l1/bai4_5/screens/login_screen.dart';
-import 'package:firebase_l1/bai4_5/screens/register_screen.dart';
-import 'package:firebase_l1/bai4_5/screens/test_screen.dart';
-import 'package:firebase_l1/bai4_5/screens/work_screen.dart';
-import 'package:firebase_l1/bai4_5/services/notification_service.dart';
+import 'package:firebase_l1/bai3-4/screens/home_screen.dart';
+import 'package:firebase_l1/bai3-4/screens/login_screen.dart';
+import 'package:firebase_l1/bai3-4/screens/register_screen.dart';
+import 'package:firebase_l1/bai3-4/screens/test_screen.dart';
+import 'package:firebase_l1/bai3-4/screens/work_screen.dart';
+import 'package:firebase_l1/bai3-4/services/notification_service.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -34,7 +35,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
-        '/home': (context) => HomeScreen(),
+        '/home': (context) => AuthScreen(),
         '/work': (context) => WorkScreen(),
         '/test': (context) => MyHomePage(title: 'tt',),
       },
