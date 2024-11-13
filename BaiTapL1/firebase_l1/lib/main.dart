@@ -4,6 +4,7 @@ import 'package:firebase_l1/bai3-4/screens/register_screen.dart';
 import 'package:firebase_l1/bai3-4/screens/test_screen.dart';
 import 'package:firebase_l1/bai3-4/screens/work_screen.dart';
 import 'package:firebase_l1/bai3-4/services/notification_service.dart';
+import 'package:firebase_l1/bai5/screens/main_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,13 +32,14 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/login',
+      initialRoute: '/bai5',
       routes: {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
         '/home': (context) => AuthScreen(),
         '/work': (context) => WorkScreen(),
         '/test': (context) => MyHomePage(title: 'tt',),
+        '/bai5' : (context) => MainScreen()
       },
     );
   }

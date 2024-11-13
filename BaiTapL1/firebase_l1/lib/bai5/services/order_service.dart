@@ -1,28 +1,25 @@
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_l1/bai5/models/order_model.dart';
+import 'package:firebase_l1/bai5/models/order.dart';
 
 class OrderService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<void> createOrder(OrderModel order) async {
+  Future<void> placeOrder(OrderModel order) async {
     try {
-      await _firestore.collection('orders').doc(order.id).set(order.toMap());
+      await _firestore.collection('orders').add(order.toMap());
     } catch (e) {
-      throw Exception('Failed to create order: $e');
+      print('Error placing order: $e');
+      rethrow;
     }
   }
 
   Stream<List<OrderModel>> getUserOrders(String userId) {
     return _firestore
-        .collection('orders')
-        .where('userId', isEqualTo: userId)
-        .snapshots()
-        .map((snapshot) {
-      return snapshot.docs
-          .map((doc) => OrderModel.fromMap(doc.data()))
-          .toList();
-    });
+      .collection('orders')
+      .where('userId', isEqualTo: userId)
+      .snapshots()
+      .map((snapshot) => snapshot.docs
+        .map((doc) => OrderModel.fromMap(doc.data(), doc.id))
+        .toList());
   }
 }

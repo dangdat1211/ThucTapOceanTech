@@ -1,18 +1,16 @@
 class Product {
-  final String id;
-  final String name;
-  final double price;
-  final String description;
-  final String imageUrl;
-  final int stock;
-
+  String? id;
+  String name;
+  double price;
+  String description;
+  String imageUrl;
+  
   Product({
-    required this.id,
-    required this.name,
+    this.id,
+    required this.name, 
     required this.price,
     required this.description,
     required this.imageUrl,
-    required this.stock,
   });
 
   Map<String, dynamic> toMap() {
@@ -22,18 +20,16 @@ class Product {
       'price': price,
       'description': description,
       'imageUrl': imageUrl,
-      'stock': stock,
     };
   }
 
-  factory Product.fromMap(Map<String, dynamic> map) {
+  factory Product.fromMap(Map<String, dynamic> map, String id) {
     return Product(
-      id: map['id'],
+      id: id,
       name: map['name'],
-      price: map['price'].toDouble(),
+      price: map['price'],
       description: map['description'],
       imageUrl: map['imageUrl'],
-      stock: map['stock'],
     );
   }
 }
